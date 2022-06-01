@@ -1,0 +1,50 @@
+unsigned long One = 0; 
+unsigned long Two = 0;
+unsigned long Three = 0;
+unsigned long Four = 0;
+void setup() {
+  pinMode(5, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(10, OUTPUT);
+}
+
+  
+
+void loop() {
+   if (millis() - One > 1000) {
+    digitalWrite(5, HIGH);
+    One = millis(); 
+  }
+    
+  else if (millis() - One > 1000) {
+    digitalWrite(5, LOW);
+  }
+
+    
+  if (millis() - Two > 2000) {
+    digitalWrite(12, HIGH);
+    Two= millis();
+  }
+  else if (millis() - Two > 2000) {
+    digitalWrite(12, LOW);
+  }
+
+  //new
+   if (millis() - Three > 500) {
+    digitalWrite(8, HIGH);
+    Three = millis();
+  }
+    
+  else if (millis() - Three > 1000) {
+    digitalWrite(8, LOW);
+  }
+  //new
+  if (millis() - Four > 1500) {
+    digitalWrite(10, HIGH);
+    Four = millis();
+  }
+  else if (millis() - Four > 2000) {
+    digitalWrite(10, LOW);
+  }
+}
